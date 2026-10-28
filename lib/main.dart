@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final List<Widget> pages = [
       KeyCalculatorScreen(isAr: isAr),
       ChequeSimulatorScreen(isAr: isAr),
-      MasseMonétaireScreen(isAr: isAr),
+      MasseMonetaireScreen(isAr: isAr), // تم التصحيح هنا
       TaxesCalculatorScreen(isAr: isAr),
       SettingsScreen(
         currentLang: widget.currentLang,
@@ -384,16 +384,16 @@ class _ChequeSimulatorScreenState extends State<ChequeSimulatorScreen> {
   }
 }
 
-// 3. Masse Monétaire Screen
-class MasseMonétaireScreen extends StatefulWidget {
+// 3. Masse Monetaire Screen (تم تعديل الاسم هنا لتجنب الأحرف الخاصة)
+class MasseMonetaireScreen extends StatefulWidget {
   final bool isAr;
-  const MasseMonétaireScreen({super.key, required this.isAr});
+  const MasseMonetaireScreen({super.key, required this.isAr});
 
   @override
-  State<MasseMonétaireScreen> createState() => _MasseMonétaireScreenState();
+  State<MasseMonetaireScreen> createState() => _MasseMonetaireScreenState();
 }
 
-class _MasseMonétaireScreenState extends State<MasseMonétaireScreen> {
+class _MasseMonetaireScreenState extends State<MasseMonetaireScreen> {
   final TextEditingController _amountController = TextEditingController();
   Map<int, int> _breakdown = {};
 
